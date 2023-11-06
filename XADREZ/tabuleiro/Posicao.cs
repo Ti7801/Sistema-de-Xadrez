@@ -10,7 +10,7 @@ namespace XADREZ.tabuleiro
 
         public Posicao(int linha, int coluna)
         {
-            Linha= linha;
+            Linha = linha;
             Coluna = coluna;
         }
 
