@@ -6,7 +6,8 @@ namespace XADREZ.tabuleiro
     {
         public int Linhas { get; set; }
         public int Colunas { get; set; }
-        public Peca[,] Pecas { get; set; }
+
+        private Peca[,] Pecas;
 
         public Tabuleiro(int linhas, int colunas)
         {
@@ -14,6 +15,11 @@ namespace XADREZ.tabuleiro
             Colunas = colunas;
             Pecas = new Peca[linhas, colunas];
 
+        }
+
+        public Peca Peca(int linha, int coluna)
+        {
+            return Pecas[linha, coluna];
         }
     }
 }
