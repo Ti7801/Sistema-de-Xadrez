@@ -12,6 +12,7 @@ namespace XADREZ
             // CAMADA JOGO DE XADREZ
             // CAMADA TABULEIRO
 
+            /*
             try
             {
                 Tabuleiro tab = new Tabuleiro(8, 8);
@@ -29,10 +30,14 @@ namespace XADREZ
             }
 
             Console.ReadLine() ;    
-          
+          */
+            PosicaoXadrez pos = new PosicaoXadrez('c', 7);
 
+            Console.WriteLine(pos);
 
+            Console.WriteLine(pos.toPosicao());
 
+            Console.ReadLine();
 
         }
     }
