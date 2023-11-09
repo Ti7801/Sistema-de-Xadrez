@@ -8,27 +8,23 @@ namespace XADREZ
     {
         static void Main(string[] args)
         {
-            // CAMADA DE APLICAÇÃO  
-            // CAMADA JOGO DE XADREZ
-            // CAMADA TABULEIRO
-
-            /*       
-            Console.ReadLine() ;          
-            PosicaoXadrez pos = new PosicaoXadrez('c', 7);
-            Console.WriteLine(pos);
-            Console.WriteLine(pos.toPosicao());
-            */
             try
             {
-                Tabuleiro tab = new Tabuleiro(8, 8);
+                PartidaDeXadrez partida = new PartidaDeXadrez();
 
-                tab.ColocarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
-                tab.ColocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
-                tab.ColocarPeca(new Rei(tab, Cor.Preta), new Posicao(2, 4));
-                tab.ColocarPeca(new Rei(tab, Cor.Preta), new Posicao(0, 2));
-                tab.ColocarPeca(new Torre(tab, Cor.Branca), new Posicao(3, 5));
+                while (!partida.Terminada)
+                {
+                    Console.Clear();
+                    Tela.ImprimirTabuleiro(partida.Tab);
 
-                Tela.ImprimirTabuleiro(tab);
+                    Console.WriteLine();
+                    Console.Write("Origem: ");
+                    Posicao origem = Tela.LerPosicaoXadrez().toPosicao();
+                    Console.Write("Destino: ");
+                    Posicao destino = Tela.LerPosicaoXadrez().toPosicao();
+
+                    partida.ExecutarMovimento(origem, destino);
+                }
             }
             catch (TabuleiroException e)
             {

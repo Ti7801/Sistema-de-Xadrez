@@ -18,5 +18,10 @@ namespace XADREZ.tabuleiro
             QteMovimentos = 0; // No início do jogo a peca tem zero movimentos.
         }
 
+        public void IncrementarQteMovimentos()
+        {
+            QteMovimentos++;
+        }
+
     }
 }
