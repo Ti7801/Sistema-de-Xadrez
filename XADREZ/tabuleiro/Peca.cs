@@ -1,7 +1,7 @@
 ﻿
 namespace XADREZ.tabuleiro
 {
-    internal class Peca
+    internal abstract class Peca
     {
         //PROTECTED : Ela pode ser acessada por ela mesmo e pelas subClasses dela.
 
@@ -22,6 +22,9 @@ namespace XADREZ.tabuleiro
         {
             QteMovimentos++;
         }
+
+        public abstract bool[,] MovimentosPossiveisPeca();
+
 
     }
 }
