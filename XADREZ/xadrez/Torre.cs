@@ -70,7 +70,7 @@ namespace XADREZ.xadrez
                 {
                     break;
                 }
-                pos.Coluna = pos.Coluna + 1;
+                pos.Coluna = pos.Coluna - 1;
             }
 
             return mat;
