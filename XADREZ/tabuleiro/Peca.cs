@@ -26,7 +26,7 @@ namespace XADREZ.tabuleiro
         public void DecrementarQteMovimentos()
         {
             QteMovimentos--;
-        }
+        } 
 
         public bool ExisteMovimentosPossiveis()
         {
@@ -45,7 +45,7 @@ namespace XADREZ.tabuleiro
             return false;
         }
 
-        public bool PodeMoverPara(Posicao pos)
+        public bool MovimentoPossivel(Posicao pos)
         {
             return MovimentosPossiveisPeca()[pos.Linha, pos.Coluna];
         }
