@@ -5,9 +5,8 @@ namespace XADREZ.xadrez
 {
     internal class Peao : Peca
     {
-
         public Peao(Tabuleiro tab, Cor cor) : base(tab, cor)
-        {
+        {          
         }
 
         public override string ToString()
@@ -19,7 +18,7 @@ namespace XADREZ.xadrez
         {
             Peca p = Tab.Peca(pos);
 
-            return p == null || p.Cor != Cor;
+            return p != null && p.Cor != Cor;
         }
 
         private bool Livre(Posicao pos)
